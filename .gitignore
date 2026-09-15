@@ -1,0 +1,11 @@
+# build scratch: downloaded candidates, contact sheets, screenshots
+tools/imgwork/
+
+# node modules for the headless-browser checks
+tools/dev/node_modules/
+tools/dev/package-lock.json
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store
