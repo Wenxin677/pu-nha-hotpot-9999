@@ -1,0 +1,244 @@
+{
+ "style_suffix": ", professional food photo, sharp focus, natural light, appetising, 8k",
+ "negative_prompt": "worst quality, low quality, blurry, watermark, text, logo, cartoon, illustration, painting, 3d render, plastic, deformed, extra fingers, cropped",
+ "interior_style": ", interior photo, sharp focus, warm light, no people, 8k",
+ "images": {
+  "hero-hotpot.jpg": {
+   "size": [
+    832,
+    512
+   ],
+   "prompt": "hotpot restaurant table from the side, steaming pot in the centre, plates of raw beef and green vegetables around it, chopsticks, warm evening light",
+   "seed": 88177
+  },
+  "broth-signature.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "dark red spicy hotpot broth in a black bowl, chilli oil floating on the surface, dried red chillies and sichuan peppercorns, steam, close up",
+   "seed": 93240
+  },
+  "beef-slices.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "raw marbled beef steaks on a wooden board, deep red meat with white fat marbling, butcher shop display, sharp focus",
+   "seed": 93200
+  },
+  "seafood-platter.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "raw prawns, squid and salmon on crushed ice with lime, seafood platter",
+   "seed": 77431
+  },
+  "mushrooms.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "enoki and shiitake mushrooms with fresh greens on a plate",
+   "seed": 77438
+  },
+  "noodles.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "bowl of handmade noodles with broth and spring onion, chopsticks",
+   "seed": 77445
+  },
+  "dumplings.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "steamed dumplings on a plate with chilli dipping sauce",
+   "seed": 77452
+  },
+  "fish-balls.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "white fish balls and green vegetables in a bowl of clear soup with a spoon, steam",
+   "seed": 91526
+  },
+  "sauces.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "small bowls of dipping sauces, sesame, chilli oil and garlic, herbs and lime",
+   "seed": 77466
+  },
+  "dumplings-basket.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "bamboo steamer basket with steamed dumplings, steam, dark table",
+   "seed": 77473
+  },
+  "about-table.jpg": {
+   "size": [
+    832,
+    512
+   ],
+   "prompt": "hotpot restaurant table set with a pot of broth, plates of raw beef, mushrooms and green vegetables, top view, no people",
+   "seed": 91539
+  },
+  "hotpot-divided.jpg": {
+   "size": [
+    832,
+    512
+   ],
+   "prompt": "hotpot on a restaurant table with small plates of fish, tofu and green vegetables around it, warm light, side view",
+   "seed": 91552
+  },
+  "hotpot-topdown.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "table seen from above, hotpot in the middle cooking meatballs, greens and noodles, small plates arranged around it",
+   "seed": 77494
+  },
+  "hotpot-spread.jpg": {
+   "size": [
+    832,
+    512
+   ],
+   "prompt": "wide view of a restaurant table with two bubbling hotpots and many plates of sliced meat, seafood and vegetables",
+   "seed": 77501
+  },
+  "dimsum.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "plate of steamed dim sum dumplings with dipping sauce on a restaurant table, warm light",
+   "seed": 88155
+  },
+  "potstickers.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "pan fried potstickers on a teal plate with soy dipping sauce",
+   "seed": 77515
+  },
+  "noodle-bowl.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "bowl of noodle soup with sliced beef, fish cake and spring onion",
+   "seed": 77522
+  },
+  "story-bowl.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "bowl of thick noodles with braised beef, greens and soft egg",
+   "seed": 77529
+  },
+  "greens.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "plate of napa cabbage, morning glory, radish and tofu skin",
+   "seed": 77536
+  },
+  "fish-dish.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "steamed fish fillet with ginger, spring onion and soy sauce on a white plate",
+   "seed": 77543
+  },
+  "prawns.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "grilled prawns with lime and chilli dipping sauce on a plate",
+   "seed": 77550
+  },
+  "branch-bkk1.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "busy modern hotpot restaurant interior at night, wooden tables, red lanterns, warm lamps",
+   "seed": 77557
+  },
+  "branch-toulkork.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "family hotpot restaurant interior, long shared tables, warm lighting, plants",
+   "seed": 77564
+  },
+  "branch-aeon.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "hotpot restaurant dining room inside a modern shopping mall, booth seating, wooden tables, warm lights, no signage",
+   "seed": 88166
+  },
+  "interior-warm.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "private dining room set for a group, round table with hotpot cooker, red and gold decor",
+   "seed": 77592
+  },
+  "interior-modern.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "contemporary asian restaurant interior, open kitchen, wooden counters, daytime",
+   "seed": 77599
+  },
+  "branch-toulsvayprey.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "hotpot restaurant interior with rattan chairs, wooden floor, hanging lanterns",
+   "seed": 77571
+  },
+  "branch-siemreap.jpg": {
+   "size": [
+    768,
+    512
+   ],
+   "prompt": "minimal hotpot restaurant interior, wicker chairs, large windows, wooden tables",
+   "seed": 77585
+  }
+ },
+ "model": {
+  "checkpoint": "Realistic_Vision_V5.1_fp16-no-ema.safetensors",
+  "vae": "vae-ft-mse-840000-ema-pruned.safetensors",
+  "upscale_model": "4x-UltraSharp.pth",
+  "steps": 20,
+  "cfg": 6.5,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "notes": "SD 1.5 photorealistic checkpoint, 30 steps, 4x UltraSharp upscale, then cover-crop per asset",
+  "hires": false,
+  "reroll_steps": 26,
+  "reroll_cfg": 6.0
+ }
+}

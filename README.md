@@ -86,6 +86,8 @@ asset stops resolving, or if a page's header/footer differs from the shared shel
   The pages say so in plain language next to the buttons.
 * Pu Nha Hotpot 9999 is the business described in the team's project proposal; phone numbers,
   addresses and franchise figures are the illustrative ones used for this coursework.
-* Photographs come from Wikimedia Commons and Unsplash contributors (fully credited in
-  `CREDITS.md`); the mascot logo is the team's own artwork and was used to generate the
-  favicon set. All illustrations in `assets/ill/` were drawn for this project as SVG.
+* Every photograph on the site was generated for this project with Stable Diffusion XL
+  running locally (ComfyUI) — the exact prompt and seed for each image is recorded in
+  `tools/ai/prompts.json` and `CREDITS.md`, so any picture can be regenerated. The mascot
+  logo is the team's own artwork and was used to generate the favicon set; the illustrations
+  in `assets/ill/`, the ambience clip and every other asset are original work done for this site.

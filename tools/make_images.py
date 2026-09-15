@@ -12,13 +12,14 @@ import json
 import os
 import re
 
-from PIL import Image
+from PIL import Image, ImageEnhance, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORK = os.path.join(ROOT, "tools", "imgwork")
 ART = os.path.join(ROOT, "tools", "artwork")
 OUT_IMG = os.path.join(ROOT, "assets", "img")
 OUT_LOGO = os.path.join(ROOT, "assets", "logos")
+AI_CREDIT = "Generated with Stable Diffusion (Realistic Vision) for this project"
 os.makedirs(OUT_IMG, exist_ok=True)
 os.makedirs(OUT_LOGO, exist_ok=True)
 
@@ -71,11 +72,11 @@ PHOTOS = {
                     "Restaurant interior, Wikimedia Commons - CC BY-SA"),
     "interior2":   ("cand",  "restaurant_int_06.jpg", "branch-toulkork.jpg", (1100, 730),
                     "Restaurant interior, Wikimedia Commons - CC BY-SA"),
-    "interior3":   ("cand",  "restaurant_int_07.jpg", "branch-siemreap.jpg", (1100, 730),
+    "interior3":   ("cand",  "restaurant_int_07.jpg", "branch-toulsvayprey.jpg", (1100, 730),
                     "Restaurant interior, Wikimedia Commons - CC BY-SA"),
     "interior4":   ("cand",  "restaurant_int_08.jpg", "branch-aeon.jpg",   (1100, 730),
                     "Restaurant interior, Wikimedia Commons - CC BY-SA"),
-    "interior5":   ("cand",  "restaurant_int_09.jpg", "branch-battambang.jpg", (1100, 730),
+    "interior5":   ("cand",  "restaurant_int_09.jpg", "branch-siemreap.jpg", (1100, 730),
                     "Restaurant interior, Wikimedia Commons - CC BY-SA"),
     "interior6":   ("cand2", "unsplash_02.jpg",      "interior-modern.jpg", (1100, 730),
                     "Modern restaurant interior, Unsplash"),
@@ -84,9 +85,14 @@ PHOTOS = {
 }
 
 
-def cover(src, dst, size):
-    """Centre-crop to the target aspect ratio, then resize."""
+def cover(src, dst, size, polish=False):
+    """Centre-crop to the target aspect ratio, then resize. ``polish`` adds a
+    mild unsharp/contrast pass for the AI renders, which come out a little soft."""
     im = Image.open(src).convert("RGB")
+    if polish:
+        im = im.filter(ImageFilter.UnsharpMask(radius=2.2, percent=115, threshold=3))
+        im = ImageEnhance.Contrast(im).enhance(1.04)
+        im = ImageEnhance.Color(im).enhance(1.03)
     tw, th = size
     target = tw / th
     w, h = im.size
@@ -100,18 +106,28 @@ def cover(src, dst, size):
     return im.resize(size, Image.LANCZOS)
 
 
+AI_DIR = os.path.join(WORK, "ai")
+
+
 def build_photos():
+    """Prefer the AI-generated artwork in tools/imgwork/ai when it exists;
+    fall back to the downloaded stock file so a missing generation is visible."""
     credits, made = [], 0
     for key, (folder, src_name, out_name, size, credit) in PHOTOS.items():
-        src = os.path.join(WORK, folder, src_name)
+        ai_src = os.path.join(AI_DIR, out_name)
+        is_ai = os.path.exists(ai_src)
+        if is_ai:
+            src, credit_used, source_name = ai_src, AI_CREDIT, "AI:" + out_name
+        else:
+            src, credit_used, source_name = os.path.join(WORK, folder, src_name), credit, src_name
         if not os.path.exists(src):
             print("MISSING", key, src)
             continue
         dst = os.path.join(OUT_IMG, out_name)
-        im = cover(src, dst, size)
+        im = cover(src, dst, size, polish=is_ai)
         im.save(dst, "JPEG", quality=82, optimize=True, progressive=True)
-        credits.append({"key": key, "file": "assets/img/" + out_name, "credit": credit,
-                        "source": src_name})
+        credits.append({"key": key, "file": "assets/img/" + out_name, "credit": credit_used,
+                        "source": source_name})
         made += 1
     print("photos written:", made)
     return credits

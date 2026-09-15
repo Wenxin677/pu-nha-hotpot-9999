@@ -9,3 +9,6 @@ tools/dev/package-lock.json
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# local python env for the local image generation (not part of the site)
+tools/ai/.venv/

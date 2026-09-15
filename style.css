@@ -377,14 +377,16 @@ section[id], main[id] { scroll-margin-top: 96px; }  /* sticky header offset for 
 .hero {
   position: relative;
   color: var(--white);
-  background: linear-gradient(180deg, rgba(94, 6, 19, .92), rgba(142, 10, 29, .86)),
-              url('assets/img/hero-hotpot.jpg') center 35% / cover no-repeat;
+  background:
+    linear-gradient(90deg, rgba(40, 3, 8, .88) 0%, rgba(40, 3, 8, .60) 34%, rgba(40, 3, 8, .12) 66%, rgba(40, 3, 8, .24) 100%),
+    linear-gradient(180deg, rgba(94, 6, 19, .26) 0%, rgba(94, 6, 19, .12) 55%, rgba(142, 10, 29, .45) 100%),
+    url('assets/img/hero-hotpot.jpg') center 45% / cover no-repeat;
   overflow: hidden;
   padding-block: clamp(3rem, 8vw, 6.5rem) clamp(4rem, 9vw, 7rem);
 }
 .hero::after {                    /* warm glow at the base, over the skyline */
   content: "";
-  position: absolute; inset: auto 0 -2px 0; height: 45%;
+  position: absolute; inset: auto 0 -2px 0; height: 32%;
   background: linear-gradient(180deg, transparent, rgba(255, 246, 232, .94));
   pointer-events: none;
 }
@@ -410,7 +412,7 @@ section[id], main[id] { scroll-margin-top: 96px; }  /* sticky header offset for 
 .chip:nth-child(5) { animation-delay: 1.6s; }
 .hero__badge {
   position: absolute; right: clamp(-2rem, 2vw, 2rem); top: clamp(1rem, 4vw, 3rem);
-  width: clamp(120px, 20vw, 230px); opacity: .95;
+  width: clamp(104px, 14vw, 178px); opacity: .9;
   filter: drop-shadow(0 16px 26px rgba(0, 0, 0, .38));
   animation: float 7s ease-in-out infinite;
   z-index: 2;
